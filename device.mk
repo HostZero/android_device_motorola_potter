@@ -83,10 +83,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
-    $(LOCAL_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_wcd9306.xml:system/etc/mixer_paths_wcd9306.xml
-
+   
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
@@ -105,11 +102,6 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     Snap
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/msm8953_mot_camera.xml:system/etc/camera/msm8953_mot_camera.xml \
-    $(LOCAL_PATH)/configs/camera/ov5693_chromatix.xml:system/etc/camera/ov5693_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/ov16860_chromatix.xml:system/etc/camera/ov16860_chromatix.xml
-
 # CMActions
 PRODUCT_PACKAGES += \
     CMActions
@@ -125,9 +117,6 @@ PRODUCT_PACKAGES += \
 # Display Calibration
 PRODUCT_PACKAGES += \
     libjni_livedisplay
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml:system/etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -189,7 +178,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp_ds.conf:system/etc/libnfc-nxp_ds.conf \
 
 PRODUCT_PACKAGES += \
     libnfc \
@@ -237,7 +225,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-addison.conf:system/etc/thermal-engine-addison.conf
+    $(LOCAL_PATH)/configs/thermal-engine-potter.conf:system/etc/thermal-engine-potter.conf
 
 # Wifi
 PRODUCT_PACKAGES += \
