@@ -40,14 +40,13 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := addison,addison_retail
+TARGET_OTA_ASSERT_DEVICE := potter,potter_retail
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_addison
-TARGET_RECOVERY_DEVICE_MODULES := libinit_addison
+TARGET_INIT_VENDOR_LIB := libinit_potter
+TARGET_RECOVERY_DEVICE_MODULES := libinit_potter
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/motorola/potter/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=350M
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=350M
 BOARD_KERNEL_BASE := 0x80000000
@@ -56,9 +55,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(TARGET_DT)
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
+TARGET_KERNEL_SOURCE := kernel/motorola/potter
 TARGET_KERNEL_CONFIG := potter_defconfig
-TARGET_PREBUILT_KERNEL := device/motorola/potter/kernel 
 
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
