@@ -25,21 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-/dev/null                 0666   root       root
-/dev/zero                 0666   root       root
-/dev/full                 0666   root       root
-/dev/ptmx                 0666   root       root
-/dev/tty                  0666   root       root
-/dev/random               0666   root       root
-/dev/urandom              0666   root       root
-
-/dev/ashmem               0666   root       root
-/dev/binder               0666   root       root
-/dev/tspdrv               0666   root       root
-/dev/ttyHSL0             0660   radio      system
-# logger should be world writable (for logging) but not readable
-/dev/log/*                0666   root       log
-
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     qcom_diag
 /dev/ttydiag0             0660   system     qcom_diag
@@ -127,7 +112,7 @@
 /dev/v4l2-hal-ctrl        0660   system     camera
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
-/dev/qseecom              0660   system     drmrpc
+/dev/qseecom              0660   system     mot_tpapi
 /dev/qsee_ipc_irq_spss    0660   system     drmrpc
 /dev/seemplog             0660   system     system
 /dev/pft                  0660   system     drmrpc
@@ -158,6 +143,7 @@
 /dev/msm_vidc_enc         0660   system     audio
 /dev/msm_rotator          0660   system     system
 /dev/hw_random            0600   root       root
+/dev/sdsprpc-smd          0660   system     system
 
 #permissions for audio
 /dev/wcd-dsp-glink        0660   system     audio
@@ -205,15 +191,6 @@
 /dev/dvb/adapter0/demux*  0440   media       media
 /dev/dvb/adapter0/dvr*    0660   media       media
 /dev/dvb/adapter0/video*  0660   media       media
-
-# Block devices
-/dev/block/bootdevice/by-name/hob          0660 radio radio
-/dev/block/bootdevice/by-name/dhob         0660 radio radio
-/dev/block/bootdevice/by-name/clogo        0660 root mot_tcmd
-/dev/block/bootdevice/by-name/cid          0660 root mot_tcmd
-/dev/block/bootdevice/by-name/logs         0640 root log
-/dev/block/bootdevice/by-name/utags        0660 mot_tcmd system
-/dev/block/bootdevice/by-name/utagsBackup  0660 mot_tcmd system
 
 # Broadcast devices
 /dev/tsc_mux0             0660   media       media
@@ -268,8 +245,8 @@
 /dev/nfc-nci              0660    nfc         nfc
 /dev/nq-nci               0660    nfc         nfc
 /dev/assd                 0660    nfc         nfc
-/dev/bcm2079x-i2c         0660    nfc         nfc
 /dev/pn544                0660    nfc         nfc
+/dev/bcm2079x-i2c         0660    nfc         nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system
@@ -280,8 +257,6 @@
 /dev/subsys_*         0640   system     system
 
 # Add device block for FRP
-/dev/block/platform/soc/7464900.sdhci/by-name/frp       0600   system     system
-/dev/block/platform/soc/624000.ufshc/by-name/frp        0600   system     system
 /dev/block/bootdevice/by-name/frp 0600 system system
 
 # Ultrasound device
@@ -298,6 +273,8 @@
 /dev/hbtp_vm              0660   system     system
 
 # Add device block for FRP
+/dev/block/platform/soc/7464900.sdhci/by-name/frp       0600   system     system
+/dev/block/platform/soc/624000.ufshc/by-name/frp        0600   system     system
 /dev/block/bootdevice/by-name/frp 0600 system system
 
 # I2C
@@ -353,7 +330,14 @@
 /sys/devices/virtual/video4linux/video* uevent 0660 root mot_mod
 
 # Laser device
-/dev/laser                 0660   system     camera
+/dev/laser                0660   system     camera
+
+# haptic
+/dev/drv2605              0660   system     system
 
 #DTV
 /dev/isdbt                 0660 mot_dtv  mot_dtv
+
+#Egistec fingerprint
+/dev/esfp0		  0660   system     system
+

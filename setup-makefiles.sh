@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-DEVICE=addison
+DEVICE=potter
 VENDOR=motorola
 
 # Load extractutils and do some sanity checks
