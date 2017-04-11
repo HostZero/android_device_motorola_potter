@@ -205,7 +205,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.mmi.touch.sh \
     init.qcom.bt.sh \
     init.qcom.ril.sh
 
