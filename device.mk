@@ -253,6 +253,10 @@ PRODUCT_PACKAGES += \
     WCNSS_qcom_wlan_nv_India.bin \
     WCNSS_wlan_dictionary.dat
 
+# MotoDoze
+PRODUCT_PACKAGES += \
+	MotoDoze
+
 PRODUCT_COPY_FILES += \
     device/motorola/potter/firmware/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
