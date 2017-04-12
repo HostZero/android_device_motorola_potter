@@ -1,5 +1,9 @@
 [
   {
+    "repository": "android_kernel_motorola_potter",
+    "target_path": "kernel/motorola/potter"
+  },
+  {
     "repository": "android_external_bson",
     "target_path": "external/bson"
   },
