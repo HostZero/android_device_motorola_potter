@@ -20,8 +20,6 @@ DEVICE_PATH := device/motorola/potter
 
 BOARD_VENDOR := motorola-qcom
 
-TARGET_DT := device/motorola/potter/dt.img
-
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
 # Platform
@@ -52,7 +50,7 @@ BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_LZ4C_DT := true
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(TARGET_DT)
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/motorola/potter
 TARGET_KERNEL_CONFIG := lineage_potter_defconfig
